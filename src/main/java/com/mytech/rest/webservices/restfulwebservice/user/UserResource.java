@@ -1,8 +1,6 @@
 package com.mytech.rest.webservices.restfulwebservice.user;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -11,6 +9,7 @@ public class UserResource {
 
 
     private final UserDaoService userDaoService;
+
 
     //dependency Injection in constrictor
     public UserResource(UserDaoService userDaoService) {
@@ -27,4 +26,8 @@ public class UserResource {
         return userDaoService.findOne(id);
     }
 
+    @PostMapping("/users")
+    public void createUser(@RequestBody User user) {
+        userDaoService.saveUser(user);
+    }
 }
