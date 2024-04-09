@@ -1,8 +1,9 @@
 package com.mytech.rest.webservices.restfulwebservice.filtering;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonFilter;
 
-@JsonIgnoreProperties({"field1", "field3"}) // Static filtering for the hole class properties
+//@JsonIgnoreProperties({"field1", "field3"}) // Static filtering for the hole class properties
+@JsonFilter("SomeBeanFilter")
 public class SomeBean {
 
     private final String field1;
