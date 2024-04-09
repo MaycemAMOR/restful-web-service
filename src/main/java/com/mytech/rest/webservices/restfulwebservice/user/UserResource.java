@@ -50,4 +50,9 @@ public class UserResource {
                                                             resourcer is not found => 404
                                                             server exception => 500*/
     }
+
+    @DeleteMapping("/users/{id}")
+    public void deleteUser(@PathVariable int id) {
+        service.deleteById(id);
+    }
 }
