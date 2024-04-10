@@ -1,6 +1,7 @@
-package com.mytech.rest.webservices.restfulwebservice.user;
+package com.mytech.rest.webservices.restfulwebservice.post;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.mytech.rest.webservices.restfulwebservice.user.User;
 import jakarta.persistence.*;
 
 @Entity
